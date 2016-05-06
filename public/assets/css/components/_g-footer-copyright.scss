@@ -1,0 +1,17 @@
+.g-footer-copyright {
+  text-align: center;
+  @include respond-to("medium") {
+    text-align: right;
+  }
+  
+  p {
+    margin: 0;
+  }
+
+  span {
+    display: none;
+    @include respond-to("medium") {
+      display: inline;
+    }
+  }
+}

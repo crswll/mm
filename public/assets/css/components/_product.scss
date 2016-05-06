@@ -1,0 +1,110 @@
+.product {
+
+  .product-media,
+  .product-info {
+    margin: 0 0 1.5em 0;
+  }
+
+  @include respond-to("medium") {
+    .product-media, .product-info {
+      float: left;
+    }
+    .product-media {
+      width: 60%;
+      padding-right: 10px;
+    }
+    .product-info {
+      width: 40%;
+    }
+  }
+  
+  &-info__block {
+    border-bottom: 1px solid $color--gray;
+    padding: 0.75em 0;
+  }
+
+  &-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 0;
+    @include respond-to("medium") {
+      font-size: 1.75rem;
+    }
+  }
+
+  &-image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  // The price does not show here on mobile
+  &-price {
+    display: none;
+    font-weight: 600;
+    font-size: 1.75rem;
+    padding-top: 0;
+    // Hide it because it displays elsewhere later...
+    @include respond-to("medium") {
+      display: block;
+    }
+  }
+
+  // This price shows in this awkward spot on mobile...
+  &-price--header {
+    float: right;
+    color: $color--primary;
+    display: block;
+    margin-top: 2px;
+    // Hide it because it displays elsewhere later...
+    @include respond-to("medium") {
+      display: none;
+    }
+  }
+
+  // The review summary is hidden on mobile...
+  &-review-summary {
+    display: none;
+    font-size: 0.9rem;
+    // Shown when space becomes available...
+    @include respond-to("medium") {
+      display: block;
+    }
+  }
+
+  &-add-to-cart {
+    margin: 0 -10px;
+    padding: 0 10px;
+    border: 1px solid $color--gray;
+    border-width: 1px 0;
+    padding: 1em 0;
+    @include respond-to("medium") {
+      margin: 0;
+      padding: 0.75em 0;
+      border-top-width: 0;
+    }
+  }
+
+  &-add-to-cart-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .input {
+      max-width: 80px;
+    }
+    > * {
+      flex: 1;
+      margin: 0 5px;
+    }
+  }
+
+  &-description {
+    border-bottom-width: 0;
+  }
+
+  // Related products need those lines 
+  &-relateds {
+    padding: 10px 5px;
+    border-top: 1px solid $color--gray;
+    clear: left;
+  }
+}

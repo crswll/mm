@@ -1,0 +1,14 @@
+.g-header-logo {
+  &__link {
+    display: block;
+    @include size(35px);
+    color: transparent;
+
+    background: transparent image-url("icon-metrimart.svg") no-repeat center;
+
+    @include respond-to("medium") {
+      background-image: image-url("metrimart-logo-white.svg");
+      width: 175px;
+    }
+  }
+}

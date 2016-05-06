@@ -1,0 +1,9 @@
+.g-footer-logo {
+  display: block;
+  @include size(55px);
+  background: transparent image-url("icon-metrimart.svg") no-repeat center;
+  margin: 0 auto;
+  @include respond-to("medium") {
+    float: left;
+  }
+}

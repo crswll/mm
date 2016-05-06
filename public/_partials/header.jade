@@ -1,0 +1,18 @@
+header.g-header(role="banner")
+
+  .container
+
+    .g-header-logo
+      a.g-header-logo__link(href="#home", title="Go Home")!= name
+
+    .g-header-search
+      form.g-header-search__form(action="search", method="post", role="search")
+        input.g-header-search__field(type="search", placeholder="Search")
+        button.button.g-header-search__button Search
+
+    .g-header-account
+      a.g-header-account__link(href="#account") Sign in 
+        span.g-header-account__my-account My Account
+
+    .g-header-cart
+      a.g-header-cart__link(href="#cart", title="View Cart")

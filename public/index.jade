@@ -1,0 +1,41 @@
+.product
+    
+  .product-media
+    .product-header
+      span.product-price--header $199.95
+      h1.product-title Sphero Darkside Ollie
+
+    .product-images
+      img.product-image(src="products/HHTK2.jpg", alt="Sphero Darkside Ollie")
+
+  .product-info
+    .product-info__block.product-price $199.95
+    .product-info__block.product-review-summary 1,293 Reviews
+    .product-info__block.product-add-to-cart
+      form.product-add-to-cart-form
+        label(for="quantity") Quantity
+        input.input.input--quantity(name="quantity", id="quantity", type="number", value="1")
+        button.button.button--action Add To Cart
+
+    section.product-description
+      h1 Wicked-fast racing
+      p Devious and defiant, Sphero's Darkside Ollie is an electrical beast that draws its energy from free-wheeling competition and reckless abandonment. Use your iPhone, iPad, or iPod touch to command this app-endabled robot with forces that unleash its impressive power. But beware that the Darkside can overpower anything standing in the way of victory. The Darkside Ollie app is built to help you pull off amazing tricks. command Darkside witht he joystick while you use the trick pad to spin.
+
+      h2 What's in the box?
+      ul
+        li Sphero Darkside Ollie
+        li Two nubby tires
+        li Two turbo tires
+        li Two prime hubs
+        li Two flux hubs
+
+  section.product-relateds
+    h1 Customers also viewed these products
+
+    .products.products--related
+        != partial("_partials/thumb", { name: "Edwin the Duck Learning Toy", price: "$99.95", img: "HJNR2.jpg" })
+        != partial("_partials/thumb", { name: "Sphero SPRK Edition Robot", price: "$129.95", img: "HJ2B2.jpg" })
+        != partial("_partials/thumb", { name: "BB-8 App-Enabled Droid by Sphero", price: "$149.95", img: "HJ4R2.jpg" })
+        != partial("_partials/thumb", { name: "Tiggly Words Learning System", price: "$29.95", img: "HHW72.jpg" })
+
+

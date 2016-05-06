@@ -1,0 +1,36 @@
+.g-header-search {
+  margin: 0 10px;
+  flex: 1;
+
+  &__field {
+    border: 1px solid $color--gray;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 1.1rem;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+
+    // Only doing this for Chrome/Safari because this seems like an accident...
+    &:placeholder-shown {
+       text-transform: uppercase;
+       font-weight: 600;
+       color: darken($color--gray, 10%);
+    }
+    
+    @include respond-to("medium") {
+      border-radius: 30px;
+      width: 90%;
+      text-align: left;
+      &:placeholder-shown {
+         text-transform: none;
+      }
+    }
+
+  }
+
+  &__button {
+    display: none;
+  }
+}

@@ -1,0 +1,13 @@
+.g-header-cart {
+  &__link {
+    display: block;
+    @include size(35px);
+
+    background: transparent image-url("icon-shopping-cart.svg") no-repeat center;
+
+    @include respond-to("medium") {
+      background-image: image-url("icon-shopping-cart-white.svg");
+      margin: 0 25px;
+    }
+  }
+}

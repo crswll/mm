@@ -1,0 +1,15 @@
+$font--sans-serif: 'Open Sans', Arial, sans-serif;
+
+$color--primary: #138FDC;
+$color--secondary: #42BC4E;
+
+$color--yellow: #FDCA40;
+
+$color--gray: #E2E2E2;
+$color--gray--darker: #828282;
+
+$breakpoints: (
+  "medium": (min-width: em(800px))
+);
+
+$imagePath: "/assets/img";

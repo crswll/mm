@@ -1,0 +1,21 @@
+.g-header {
+  border-bottom: 1px solid $color--gray;
+  margin-bottom: 20px;
+  
+  @include respond-to("medium") {
+    background-color: $color--primary;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 80px;
+    @include respond-to("medium") {
+      height: 100px;
+    }
+  }
+}

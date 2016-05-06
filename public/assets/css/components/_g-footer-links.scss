@@ -1,0 +1,52 @@
+.g-footer-links {
+  color: $color--primary;
+  text-align: center;
+  @include respond-to("medium") {
+    text-align: right;
+    color: $color--gray--darker;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    @include respond-to("medium") {
+      margin: 0.5em 0 0 0;
+    }
+  }
+
+  li {
+    display: inline;
+
+    &:before {
+      content: "|";
+      margin: 0 2px;
+    }
+    &:first-child:before {
+      display: none;
+    }
+
+    // Hide everything after the third link...
+    &:nth-child(3) ~ li {
+      display: none;
+      // Show them when space is available...
+      @include respond-to("medium") {
+        display: inline;
+      }
+    }
+  }
+
+  a {
+    text-transform: lowercase;
+    color: inherit;
+    text-decoration: none;
+
+    // The "this site" part of the about link in the 
+    // footer shows depending on available space...
+    span {
+      display: none;
+      @include respond-to("medium") {
+        display: inline;
+      }
+    }
+  }
+}
