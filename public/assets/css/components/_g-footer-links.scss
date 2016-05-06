@@ -26,7 +26,7 @@
     }
 
     // Hide everything after the third link...
-    &:nth-child(3) ~ li {
+    &:nth-child(n+4) {
       display: none;
       // Show them when space is available...
       @include respond-to("medium") {
